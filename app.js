@@ -14,11 +14,17 @@ const convertFahrToCelsius = (fahr) => {
     console.log(
       `${JSON.stringify(fahr)} is not a valid number but a/an object.`
     );
+  } 
+   else if (fahr === true || fahr === false) {
+    console.log(
+      `${JSON.stringify(fahr)} is not a valid number but a Boolean.`
+    );     
+    
   } else if (
     (typeof fahr === 'number' || typeof fahr === 'string') &&
     /^[0-9]+$/.test(fahr)
   ) {
-let myFahr = fahr * (9 / 5) + 32;
+let myFahr = (fahr - 32) * (5 / 9);
     console.log(myFahr.toFixed(4));
   } else {
     console.log(typeof fahr);
@@ -26,7 +32,7 @@ let myFahr = fahr * (9 / 5) + 32;
   }
 };
 
-convertFahrToCelsius([1, 2, 3]);
+convertFahrToCelsius();
 
 
 // Q2: Write a function named "checkYuGiOh".
