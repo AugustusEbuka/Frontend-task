@@ -32,7 +32,7 @@ let myFahr = (fahr - 32) * (5 / 9);
   }
 };
 
-convertFahrToCelsius();
+convertFahrToCelsius([1, 2, 3]);
 
 
 // Q2: Write a function named "checkYuGiOh".
